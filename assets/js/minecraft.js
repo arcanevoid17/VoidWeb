@@ -5,16 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const locationOptions = document.querySelectorAll('.location-option');
     const plansContainer = document.getElementById('plansContainer');
 
-    const savedCurrency = localStorage.getItem('currency') || 'USD';
-    const savedLocation = localStorage.getItem('location') || 'usa';
+    const savedCurrency = localStorage.getItem('currency') || 'PHP';
+    const savedLocation = localStorage.getItem('location') || 'premium';
 
     let currentCurrency = savedCurrency;
     let currentLocation = savedLocation;
 
     const exchangeRates = {
-        'USD': 1,
-        'EUR': 0.85,
-        'GBP': 0.75
+        'PHP': 1,
+        'USD': 0.85,
     };
 
     const updatePlans = () => {
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 plan.style.display = 'block';
                 const basePrice = parseFloat(plan.getAttribute('data-price'));
                 const convertedPrice = (basePrice * exchangeRates[currentCurrency]).toFixed(2);
-                plan.querySelector('.price').innerHTML = `${currentCurrency === 'USD' ? '$' : currentCurrency === 'EUR' ? '€' : '£'}${convertedPrice} <span>/ monthly</span>`;
+                plan.querySelector('.price').innerHTML = `${currentCurrency === 'PHP' ? '₱' : currentCurrency === 'USD' ? '$' : '$'}${convertedPrice} <span>/ monthly</span>`;
             } else {
                 plan.style.display = 'none';
             }
@@ -37,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const updateDropdownText = () => {
-        currencyDropdown.innerText = currentCurrency === 'USD' ? '$' : currentCurrency === 'EUR' ? '€' : '£';
-        locationDropdown.innerText = currentLocation === 'usa' ? 'United States' : currentLocation === 'germany' ? 'Germany' : 'France';
+        currencyDropdown.innerText = currentCurrency === 'PHP' ? '₱' : currentCurrency === 'USD' ? '$' : '$';
+        locationDropdown.innerText = currentLocation === 'premium' ? 'Premium Plans' : currentLocation === 'budge' ? 'Budget Plans' : 'France';
     };
 
     currencyOptions.forEach(option => {
