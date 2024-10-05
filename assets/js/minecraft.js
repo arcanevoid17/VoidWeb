@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const updateDropdownText = () => {
         currencyDropdown.innerText = currentCurrency === 'USD' ? '₱' : currentCurrency === 'EUR' ? '$' : '£';
-        locationDropdown.innerText = currentLocation === 'usa' ? 'Premium Plans' : currentLocation === 'germany' ? 'Budget Plans' : 'Budget Plans';
+        locationDropdown.innerText = currentLocation === 'usa' ? 'Premium Plans' : currentLocation === 'germany' ? 'Budget Plans' : 'Server Addons';
     };
 
     currencyOptions.forEach(option => {
