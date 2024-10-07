@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentLocation = savedLocation;
 
     const exchangeRates = {
-        'USD': 56.43,
+        'USD': 56.86,
         'EUR': 1,
 
     };
