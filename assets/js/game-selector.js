@@ -1,20 +1,20 @@
 $(document).ready(function() {
     const gameLinks = {
       "Minecraft": {
-          "USA": "https://example.com/ark/usa",
-          "Germany": "https://example.com/ark/germany",
-          "Finland": "https://example.com/ark/germany",
-          "France": "https://example.com/ark/germany",
-          "default": "https://example.com/ark"
+          "USA": "",
+          "Germany": "",
+          "Finland": "",
+          "France": "",
+          "default": ""
       },
-      "RUST": "https://example.com/rust",
-      "FiveM": "https://example.com/fivem",
+      "RUST": "",
+      "FiveM": "",
       "ARK: Survival Evolved": {
           "USA": "ark.php?location=USA",
           "Germany": "ark.php?location=Germany",
           "default": "ark.php"
       },
-      "Terraria": "https://example.com/terraria"
+      "Terraria": ""
     };
 
     const locationImages = {
